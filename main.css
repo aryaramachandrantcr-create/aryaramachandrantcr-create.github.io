@@ -114,13 +114,20 @@ body {
   transform-style: preserve-3d;
 }
 
-.flip-card:hover .flip-card-inner,
+/* Hover flip — only on devices that support true hover (not touch) */
+@media (hover: hover) {
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+  .flip-card:hover {
+    transform: scale(1.02);
+  }
+}
+
+/* JS-toggled flip — works on all devices (used for tap on mobile) */
 .flip-card.flipped .flip-card-inner {
   transform: rotateY(180deg);
 }
-
-/* Slight scale-up on hover */
-.flip-card:hover,
 .flip-card.flipped {
   transform: scale(1.02);
 }
