@@ -702,7 +702,8 @@ body {
 
   .contact-link,
   .contact-text {
-    font-size: 16px;
+    font-size: 14px;
+    overflow-wrap: break-word;
   }
 
   .contact-icon {
