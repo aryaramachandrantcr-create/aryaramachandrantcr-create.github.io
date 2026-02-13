@@ -589,8 +589,8 @@ body {
     font-size: 40px;
   }
 
-  .contact-item {
-    justify-content: center;
+  .contact-details {
+    align-items: center;
   }
 
   .contact-buttons {
