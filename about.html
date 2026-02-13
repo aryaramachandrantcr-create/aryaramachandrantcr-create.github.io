@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About | Arya Ramachandran</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@500&family=Poppins:wght@400;500;800&display=swap" rel="stylesheet">
+
+  <!-- Shared styles + About page styles -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="about.css">
+</head>
+<body>
+
+  <!-- SVG filter for the hand-drawn/sketchy border effect.
+       feTurbulence generates organic noise; feDisplacementMap
+       uses that noise to wobble the border lines slightly,
+       making them look hand-drawn with a pen. -->
+  <svg style="position: absolute; width: 0; height: 0;">
+    <filter id="sketchy">
+      <feTurbulence type="turbulence" baseFrequency="0.03" numOctaves="4" seed="2" result="noise"/>
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="2.5" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+  </svg>
+
+  <!-- ========== NAVIGATION BAR ========== -->
+  <header class="navbar">
+    <a href="index.html" class="navbar-logo">ARYA RAMACHANDRAN / PORTFOLIO</a>
+    <nav class="navbar-links">
+      <a href="portfolio.html">PORTFOLIO</a>
+      <a href="about.html">ABOUT</a>
+      <a href="contact.html">CONTACT</a>
+    </nav>
+    <button class="menu-toggle" aria-label="Toggle menu">&#9776;</button>
+  </header>
+
+  <!-- ========== ABOUT SECTION ========== -->
+  <main class="about-section">
+    <div class="about-wrapper">
+
+      <!-- Heading with bee -->
+      <div class="about-heading">
+        <h1>about.</h1>
+        <img src="bee.png" alt="" class="bee">
+      </div>
+
+      <!-- Hand-drawn sketchy content box -->
+      <div class="about-box">
+        <div class="about-text">
+          <p>
+            Hello everyone! I'm Arya, born and raised in Kerala, in the south of India, and I'm really excited to be on this journey with you all. I love watching movies and anime, collecting stationery I never actually use, and having deep, meaningful conversations about life. I'm naturally curious and tend to pick up new hobbies all the time.
+          </p>
+          <p>
+            I've always been drawn to product management because I enjoy exploring how things work and solving problems. I currently work as a project manager and have always had a strong team first mindset. In college, I was an elected representative and actively involved in clubs and community services, and later continued contributing through initiatives such as Women in Tech and GServe in my work.
+          </p>
+          <p>
+            Outside of work, I enjoy being part of communities for women, literary clubs, and spaces that encourage learning, dialogue, and creativity. In this portfolio, I share my curiosity about different projects through their case studies and blogs, and I'd love to hear your thoughts and feedback on my work.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <script>
+    const toggle = document.querySelector('.menu-toggle');
+    const links = document.querySelector('.navbar-links');
+    toggle.addEventListener('click', () => {
+      links.classList.toggle('open');
+    });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,131 @@
+/* ===========================
+   ABOUT PAGE — Clean desktop layout
+   =========================== */
+
+/* Section fills the viewport and centers content */
+.about-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 72px);
+  width: 100%;
+  padding: 0 80px;
+  padding-bottom: 40px;
+  background-color: #FBF8CC;
+}
+
+/* Wrapper — nudged upward so content sits higher on screen */
+.about-wrapper {
+  width: 100%;
+  max-width: 1200px;
+  margin-top: -28px;
+}
+
+/* ---------- Heading + bee ---------- */
+.about-heading {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 4px;
+}
+
+/* Bee icon — displayed at natural size, sits beside the heading */
+.bee {
+  width: 36px;
+  height: auto;
+}
+
+.about-heading h1 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 800;
+  font-size: 48px;
+  color: #F5EE84;
+  -webkit-text-stroke: 1.5px #000000;
+  paint-order: stroke fill;
+}
+
+/* ---------- Content box ---------- */
+.about-box {
+  position: relative;
+  width: 100%;
+  background-color: #FFFEF7;
+  padding: 52px 60px;
+}
+
+/* Sketchy hand-drawn border — pseudo-element only */
+.about-box::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: 3.5px solid #000000;
+  border-radius: 2px;
+  filter: url(#sketchy);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Text sits above the border layer */
+.about-text {
+  position: relative;
+  z-index: 1;
+}
+
+/* ---------- Text content ---------- */
+.about-text p {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.7;
+  color: #03045E;
+  margin-bottom: 20px;
+}
+
+.about-text p:last-child {
+  margin-bottom: 0;
+}
+
+/* ===========================
+   RESPONSIVE — TABLETS (below 768px)
+   =========================== */
+@media (max-width: 768px) {
+  .about-section {
+    padding: 0 28px;
+  }
+
+  .about-box {
+    padding: 36px 32px;
+  }
+
+  .about-heading h1 {
+    font-size: 36px;
+  }
+
+  .about-text p {
+    font-size: 17px;
+  }
+}
+
+/* ===========================
+   RESPONSIVE — MOBILE (below 600px)
+   =========================== */
+@media (max-width: 600px) {
+  .about-section {
+    padding: 0 16px;
+  }
+
+  .about-box {
+    padding: 28px 20px;
+  }
+
+  .about-heading h1 {
+    font-size: 28px;
+  }
+
+  .about-text p {
+    font-size: 15px;
+    line-height: 1.6;
+  }
+}

@@ -1,0 +1,209 @@
+/* ===========================
+   RESET & BASE STYLES
+   =========================== */
+/* Remove default browser spacing so our design is consistent */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #FBF8CC;           /* Light cream background from your Figma */
+  min-height: 100vh;                    /* Fill at least the full screen height */
+}
+
+/* ===========================
+   NAVIGATION BAR
+   =========================== */
+.navbar {
+  display: flex;                        /* Flexbox places items in a row */
+  justify-content: space-between;       /* Logo on left, links on right */
+  align-items: center;
+  padding: 24px 48px;                   /* Spacing inside the navbar */
+}
+
+.navbar-logo {
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 500;                     /* DM Sans Medium */
+  font-size: 14px;
+  color: #474306;                       /* Dark olive from your Figma */
+  letter-spacing: 1px;
+  text-decoration: none;
+}
+
+.navbar-links {
+  display: flex;
+  gap: 32px;                            /* Space between each link */
+}
+
+.navbar-links a {
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  color: #474306;
+  text-decoration: none;                /* Remove the default underline */
+  letter-spacing: 1px;
+  transition: opacity 0.2s;             /* Smooth hover effect */
+}
+
+.navbar-links a:hover {
+  opacity: 0.6;                         /* Subtle fade on hover */
+}
+
+/* Mobile menu button — hidden on desktop */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: #474306;
+  cursor: pointer;
+}
+
+/* ===========================
+   HERO SECTION
+   =========================== */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 80px;                            /* Space between image and text */
+  padding: 80px 48px;
+  min-height: calc(100vh - 80px);       /* Fill remaining screen below navbar */
+}
+
+/* ---------- Left side: Profile image ---------- */
+.hero-image {
+  flex-shrink: 0;                       /* Prevent image from squishing */
+  position: relative;                   /* Anchor point for the plus signs */
+}
+
+.image-wrapper {
+  width: 320px;
+}
+
+.image-wrapper img {
+  width: 100%;
+  height: auto;                         /* Maintain the image's aspect ratio */
+}
+
+/* ---------- Right side: Text content ---------- */
+.hero-content {
+  max-width: 560px;                     /* Keeps text from stretching too wide */
+}
+
+.greeting {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;                     /* Poppins Medium */
+  font-size: 22px;                      /* Matched with .location */
+  color: #03045E;                       /* Deep navy from your Figma */
+  margin-bottom: 16px;
+}
+
+.headline {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 800;                     /* Poppins Extra Bold */
+  font-size: 42px;
+  line-height: 1.2;                     /* Tighten line spacing for large text */
+  color: #03045E;
+  margin-bottom: 12px;
+}
+
+.location {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;                     /* Poppins Medium */
+  font-size: 22px;                      /* Matched with .greeting */
+  color: #03045E;
+  margin-bottom: 32px;
+}
+
+.btn-work {
+  display: inline-block;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;                     /* Poppins Regular (not bold) */
+  font-size: 16px;
+  color: #474306;                       /* Dark olive text to match design */
+  background-color: #F5EE84;            /* Yellow button from your Figma */
+  padding: 18px 52px;
+  border: 2.5px solid #000000;
+  border-radius: 14px;
+  text-align: center;
+  text-decoration: none;
+  /* Solid shadow offset 5px right, 5px down — creates the dark "back layer" */
+  box-shadow: 5px 5px 0px #000000;
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+
+.btn-work:hover {
+  /* On hover, shrink the shadow and shift the button down — feels like a press */
+  transform: translate(2px, 2px);
+  box-shadow: 3px 3px 0px #000000;
+}
+
+/* ===========================
+   RESPONSIVE — TABLETS (below 900px)
+   =========================== */
+@media (max-width: 900px) {
+  .hero {
+    flex-direction: column;             /* Stack image above text */
+    text-align: center;
+    gap: 48px;
+    padding: 48px 32px;
+  }
+
+  .headline {
+    font-size: 32px;
+  }
+
+  .image-wrapper {
+    width: 260px;
+    height: 260px;
+  }
+}
+
+/* ===========================
+   RESPONSIVE — MOBILE (below 600px)
+   =========================== */
+@media (max-width: 600px) {
+  .navbar {
+    padding: 16px 24px;
+  }
+
+  /* Hide the nav links by default on mobile */
+  .navbar-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 56px;
+    right: 24px;
+    background-color: #FBF8CC;
+    padding: 16px 24px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    gap: 16px;
+  }
+
+  /* Show links when menu is toggled open */
+  .navbar-links.open {
+    display: flex;
+  }
+
+  /* Show the hamburger menu button */
+  .menu-toggle {
+    display: block;
+  }
+
+  .hero {
+    padding: 32px 24px;
+  }
+
+  .headline {
+    font-size: 26px;
+  }
+
+  .image-wrapper {
+    width: 200px;
+    height: 200px;
+  }
+}

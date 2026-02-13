@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | Arya Ramachandran</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@500&family=Poppins:wght@400;500;800&display=swap" rel="stylesheet">
+
+  <!-- Shared styles + Contact page styles -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="contact.css">
+</head>
+<body>
+
+  <!-- ========== NAVIGATION BAR ========== -->
+  <header class="navbar">
+    <a href="index.html" class="navbar-logo">ARYA RAMACHANDRAN / PORTFOLIO</a>
+    <nav class="navbar-links">
+      <a href="portfolio.html">PORTFOLIO</a>
+      <a href="about.html">ABOUT</a>
+      <a href="contact.html">CONTACT</a>
+    </nav>
+    <button class="menu-toggle" aria-label="Toggle menu">&#9776;</button>
+  </header>
+
+  <!-- ========== CONTACT SECTION ========== -->
+  <main class="contact-section">
+    <div class="contact-wrapper">
+
+      <!-- Left: Cat illustration -->
+      <div class="contact-left">
+        <img src="cat_illustration.png" alt="Cat illustration" class="cat-img">
+      </div>
+
+      <!-- Right: Contact content -->
+      <div class="contact-right">
+
+        <!-- Heading -->
+        <h1 class="contact-heading">contact.</h1>
+
+        <!-- Contact details with icons -->
+        <div class="contact-details">
+          <div class="contact-item">
+            <img src="icon_linkedin.png" alt="LinkedIn" class="contact-icon">
+            <a href="https://www.linkedin.com/in/arya-ramachandran" target="_blank" class="contact-link">www.linkedin.com/in/arya-ramachandran</a>
+          </div>
+          <div class="contact-item">
+            <img src="icon_mail.png" alt="Email" class="contact-icon">
+            <a href="mailto:aryaramachandrantcr19@gmail.com" class="contact-link">aryaramachandrantcr19@gmail.com</a>
+          </div>
+          <div class="contact-item">
+            <img src="icon_whatsapp.png" alt="WhatsApp" class="contact-icon">
+            <span class="contact-text">+91 8943211896</span>
+          </div>
+          <div class="contact-item">
+            <img src="icon_notion.png" alt="Notion" class="contact-icon">
+            <a href="https://www.notion.so/a9f54eae060c829ba48881ae2e2dfad9" class="contact-link" target="_blank">Notion Portfolio</a>
+          </div>
+        </div>
+
+        <!-- Buttons -->
+        <div class="contact-buttons">
+          <a href="https://drive.google.com/file/d/1S6yFSJggREvhGsG8jS_U9x3zW7EdAU8M/view?usp=sharing" class="contact-btn" target="_blank">Resume</a>
+          <a href="mailto:aryaramachandrantcr19@gmail.com" class="contact-btn">Let's Talk</a>
+        </div>
+
+      </div>
+
+    </div>
+  </main>
+
+  <script>
+    const toggle = document.querySelector('.menu-toggle');
+    const links = document.querySelector('.navbar-links');
+    toggle.addEventListener('click', () => {
+      links.classList.toggle('open');
+    });
+  </script>
+
+</body>
+</html>

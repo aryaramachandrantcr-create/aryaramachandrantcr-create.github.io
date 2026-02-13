@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arya Ramachandran | Portfolio</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@500&family=Poppins:wght@400;500;800&display=swap" rel="stylesheet">
+
+  <!-- Single consolidated stylesheet -->
+  <link rel="stylesheet" href="main.css">
+</head>
+<body>
+
+  <!-- SVG filter for the hand-drawn sketchy border (About section) -->
+  <svg style="position: absolute; width: 0; height: 0;">
+    <filter id="sketchy">
+      <feTurbulence type="turbulence" baseFrequency="0.03" numOctaves="4" seed="2" result="noise"/>
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="2.5" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+  </svg>
+
+  <!-- ========== STICKY NAVIGATION ========== -->
+  <header class="navbar" id="navbar">
+    <a href="#home" class="navbar-logo">ARYA RAMACHANDRAN / PORTFOLIO</a>
+    <nav class="navbar-links">
+      <a href="#about" data-section="about">ABOUT</a>
+      <a href="#portfolio" data-section="portfolio">PORTFOLIO</a>
+      <a href="#contact" data-section="contact">CONTACT</a>
+    </nav>
+    <button class="menu-toggle" aria-label="Toggle menu">&#9776;</button>
+  </header>
+
+  <!-- ========== SECTION 1: HOME / HERO ========== -->
+  <section id="home" class="hero">
+    <div class="hero-image">
+      <div class="flip-card" id="profileFlip">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src="profile.png" alt="Arya Ramachandran">
+          </div>
+          <div class="flip-card-back">
+            <img src="profile-flip.jpg" alt="Arya Ramachandran">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-content">
+      <p class="greeting">Hello, I'm Arya.</p>
+      <h1 class="headline">I am a Project Manager and an aspiring Product Manager</h1>
+      <p class="location">based in India.</p>
+      <a href="https://www.notion.so/a9f54eae060c829ba48881ae2e2dfad9" class="btn-work" target="_blank">My Work</a>
+    </div>
+  </section>
+
+  <!-- ========== SECTION 2: ABOUT ========== -->
+  <section id="about" class="about-section">
+    <div class="about-wrapper">
+      <div class="about-heading">
+        <h1>about.</h1>
+        <img src="bee.png" alt="" class="bee">
+      </div>
+      <div class="about-box">
+        <div class="about-text">
+          <p>
+            Hello everyone! I'm Arya, born and raised in Kerala, in the south of India, and I'm really excited to be on this journey with you all. I love watching movies and anime, collecting stationery I never actually use, and having deep, meaningful conversations about life. I'm naturally curious and tend to pick up new hobbies all the time.
+          </p>
+          <p>
+            I've always been drawn to product management because I enjoy exploring how things work and solving problems. I currently work as a project manager and have always had a strong team first mindset. In college, I was an elected representative and actively involved in clubs and community services, and later continued contributing through initiatives such as Women in Tech and GServe in my work.
+          </p>
+          <p>
+            Outside of work, I enjoy being part of communities for women, literary clubs, and spaces that encourage learning, dialogue, and creativity. In this portfolio, I share my curiosity about different projects through their case studies and blogs, and I'd love to hear your thoughts and feedback on my work.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SECTION 3: PORTFOLIO ========== -->
+  <section id="portfolio" class="portfolio-section">
+    <div class="card-grid">
+
+      <!-- Card 1 — Franken -->
+      <div class="card card-yellow">
+        <div class="card-img-wrapper">
+          <img src="franken_img.png" alt="Frankensteining AI Robots">
+        </div>
+        <div class="card-body">
+          <h3 class="card-title">Frankensteining AI Robots</h3>
+          <p class="card-desc">2026 is shaping up to be a turning point, where humanoid robots move from experimental prototypes to early, real-world deployment...</p>
+          <a href="https://www.notion.so/Blog-Frankensteining-AI-Robots-d6054eae060c82e69ec401ac3afe2792?source=copy_link" class="card-btn" target="_blank">More</a>
+        </div>
+      </div>
+
+      <!-- Card 2 — Swiggy Mini -->
+      <div class="card card-beige">
+        <div class="card-img-wrapper">
+          <img src="swiggy_mini_img.png" alt="What happened to Swiggy Mini?">
+        </div>
+        <div class="card-body">
+          <h3 class="card-title">What happened to Swiggy Mini?</h3>
+          <p class="card-desc">For a while, Swiggy Minis felt like a quiet turning point, offering small businesses a simpler way to be seen, discovered, and supported. Why didn't it work out?</p>
+          <a href="https://www.notion.so/Case-Study-What-happened-to-Swiggy-Mini-4bb54eae060c8315897c812bb1806c34?source=copy_link" class="card-btn" target="_blank">More</a>
+        </div>
+      </div>
+
+      <!-- Card 3 — Audiobook -->
+      <div class="card card-cream">
+        <div class="card-img-wrapper">
+          <img src="audiobook_img.png" alt="UX Study: Audiobook Experience">
+        </div>
+        <div class="card-body">
+          <h3 class="card-title">UX Study: Audiobook Experience</h3>
+          <p class="card-desc">I'd been wanting to read xxxx by xxx, but time never allowed it. I decided to try the audiobook during my walks and downloaded it as soon as I got home-but...</p>
+          <a href="https://www.notion.so/Case-Study-Reimagining-the-Audiobook-Experience-for-Readers-82154eae060c82eb87a4010918930e13?source=copy_link" class="card-btn" target="_blank">More</a>
+        </div>
+      </div>
+
+      <!-- Card 4 — Voice Agent -->
+      <div class="card card-purple">
+        <div class="card-img-wrapper">
+          <img src="voice_agent_img.png" alt="Sarcastic AI Voice Agent">
+        </div>
+        <div class="card-body">
+          <h3 class="card-title">I Built Myself a Sarcastic AI Voice Agent to help with my Resume</h3>
+          <p class="card-desc">With 30 minutes and Google AI Studio, I built my first-ever sassy AI voice agent...</p>
+          <a href="https://www.notion.so/I-Built-Myself-a-Sarcastic-AI-Voice-Agent-to-help-with-my-Resume-f6a54eae060c828dac2e8179606b0e5f?source=copy_link" class="card-btn" target="_blank">More</a>
+        </div>
+      </div>
+
+      <!-- Card 5 — YT Music -->
+      <div class="card card-yellow">
+        <div class="card-img-wrapper">
+          <img src="yt_music_img.png" alt="Business War: Spotify vs Apple Music vs YouTube Music">
+        </div>
+        <div class="card-body">
+          <h3 class="card-title">Business War: Spotify vs Apple Music vs YouTube Music</h3>
+          <p class="card-desc">My time at YouTube made me curious about YouTube Music and its competitors—so which one do I like most?</p>
+          <a href="https://www.notion.so/Business-War-Spotify-vs-Apple-Music-vs-YouTube-Music-2ff54eae060c8075bfe7ecdff0aada57?v=2fa54eae060c80ea8cc1000ccbb97f24&source=copy_link" class="card-btn" target="_blank">More</a>
+        </div>
+      </div>
+
+      <!-- Card 6 — Letterboxd -->
+      <div class="card card-beige">
+        <div class="card-img-wrapper">
+          <img src="letterboxd_img.png" alt="Why do I care so much about Letterboxd?">
+        </div>
+        <div class="card-body">
+          <h3 class="card-title">Why do I care so much about Letterboxd?</h3>
+          <p class="card-desc">I love watching movies, and my love for reading about them eventually led me to Letterboxd. But do I truly enjoy using it?</p>
+          <a href="https://www.notion.so/Why-do-I-care-so-much-about-Letterboxd-2ff54eae060c80ca889dd87f348dd807?source=copy_link" class="card-btn" target="_blank">More</a>
+        </div>
+      </div>
+
+      <!-- Card 7 — Courses -->
+      <div class="card card-cream">
+        <div class="card-img-wrapper">
+          <img src="courses_img.png" alt="Work at YouTube: Building Courses">
+        </div>
+        <div class="card-body">
+          <h3 class="card-title">Work at YouTube: Building Courses</h3>
+          <p class="card-desc">In my short time at YouTube, I worked closely with YouTube Learning and YouTube Music, including YouTube Paid Courses, a beta product...</p>
+          <a href="https://www.notion.so/Work-at-YouTube-Building-Courses-30554eae060c801fbd99c6cf55d261f7?source=copy_link" class="card-btn" target="_blank">More</a>
+        </div>
+      </div>
+
+      <!-- Card 8 — Netflix -->
+      <div class="card card-purple">
+        <div class="card-img-wrapper">
+          <img src="netflix_img.png" alt="Netflix's Playbook">
+        </div>
+        <div class="card-body">
+          <h3 class="card-title">When Data Decides the Movies: Netflix's Playbook</h3>
+          <p class="card-desc">Are Netflix movies repetitive, and how does Netflix actually decide on its movies?</p>
+          <a href="https://www.notion.so/When-Data-Decides-the-Movies-Netflix-s-Playbook-30554eae060c8052ad83ef679d3c8e41?source=copy_link" class="card-btn" target="_blank">More</a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="more-link-wrapper">
+      <a href="https://www.notion.so/5c254eae060c8245a21881dd1114bde7?v=89854eae060c8304842c08780d23e8b1" class="more-link" target="_blank">More here →</a>
+    </div>
+  </section>
+
+  <!-- ========== SECTION 4: CONTACT ========== -->
+  <section id="contact" class="contact-section">
+    <div class="contact-wrapper">
+      <div class="contact-left">
+        <div class="flip-card flip-card-cat" id="catFlip">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="meow_img.png" alt="Cat illustration">
+            </div>
+            <div class="flip-card-back">
+              <img src="meow_img.png" alt="Cat illustration mirrored" class="mirrored">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="contact-right">
+        <h1 class="contact-heading">contact.</h1>
+        <div class="contact-details">
+          <div class="contact-item">
+            <img src="icon_linkedin.png" alt="LinkedIn" class="contact-icon">
+            <a href="https://www.linkedin.com/in/arya-ramachandran" target="_blank" class="contact-link">www.linkedin.com/in/arya-ramachandran</a>
+          </div>
+          <div class="contact-item">
+            <img src="icon_mail.png" alt="Email" class="contact-icon">
+            <a href="mailto:aryaramachandrantcr19@gmail.com" class="contact-link">aryaramachandrantcr19@gmail.com</a>
+          </div>
+          <div class="contact-item">
+            <img src="icon_whatsapp.png" alt="WhatsApp" class="contact-icon">
+            <span class="contact-text">+91 8943211896</span>
+          </div>
+          <div class="contact-item">
+            <img src="icon_notion.png" alt="Notion" class="contact-icon">
+            <a href="https://www.notion.so/a9f54eae060c829ba48881ae2e2dfad9" class="contact-link" target="_blank">Notion Portfolio</a>
+          </div>
+        </div>
+        <div class="contact-buttons">
+          <a href="https://drive.google.com/file/d/1S6yFSJggREvhGsG8jS_U9x3zW7EdAU8M/view?usp=sharing" class="contact-btn" target="_blank">Resume</a>
+          <a href="mailto:aryaramachandrantcr19@gmail.com" class="contact-btn">Let's Talk</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    // Mobile menu toggle
+    const toggle = document.querySelector('.menu-toggle');
+    const navLinks = document.querySelector('.navbar-links');
+    toggle.addEventListener('click', () => {
+      navLinks.classList.toggle('open');
+    });
+
+    // Close mobile menu when a link is clicked
+    document.querySelectorAll('.navbar-links a').forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('open');
+      });
+    });
+
+    // Active nav link highlight on scroll
+    const sections = document.querySelectorAll('section[id]');
+    const navAnchors = document.querySelectorAll('.navbar-links a[data-section]');
+
+    function highlightNav() {
+      const scrollY = window.scrollY + 100;
+      sections.forEach(section => {
+        const top = section.offsetTop - 80;
+        const bottom = top + section.offsetHeight;
+        const id = section.getAttribute('id');
+        const link = document.querySelector(`.navbar-links a[data-section="${id}"]`);
+        if (link) {
+          if (scrollY >= top && scrollY < bottom) {
+            link.classList.add('active');
+          } else {
+            link.classList.remove('active');
+          }
+        }
+      });
+    }
+
+    window.addEventListener('scroll', highlightNav);
+    highlightNav();
+
+    // Mobile tap support for flip cards
+    document.querySelectorAll('.flip-card').forEach(card => {
+      card.addEventListener('click', () => {
+        card.classList.toggle('flipped');
+      });
+    });
+  </script>
+
+</body>
+</html>
