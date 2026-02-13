@@ -592,17 +592,13 @@ body {
   .contact-details {
     max-width: 90%;
     margin: 0 auto 36px;
+    gap: 15px;
   }
 
   .contact-item {
     display: flex;
     align-items: center;
     gap: 15px;
-    margin-bottom: 20px;
-  }
-
-  .contact-item:last-child {
-    margin-bottom: 0;
   }
 
   .contact-icon {
