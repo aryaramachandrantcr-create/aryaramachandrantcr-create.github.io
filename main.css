@@ -590,7 +590,31 @@ body {
   }
 
   .contact-details {
+    max-width: 90%;
+    margin: 0 auto 36px;
+  }
+
+  .contact-item {
+    display: flex;
     align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+  }
+
+  .contact-item:last-child {
+    margin-bottom: 0;
+  }
+
+  .contact-icon {
+    width: 24px;
+    min-width: 24px;
+    height: 24px;
+    text-align: center;
+  }
+
+  .contact-link,
+  .contact-text {
+    white-space: nowrap;
   }
 
   .contact-buttons {
@@ -711,11 +735,13 @@ body {
   .contact-text {
     font-size: 14px;
     overflow-wrap: break-word;
+    white-space: normal;
   }
 
   .contact-icon {
-    width: 26px;
-    height: 26px;
+    width: 24px;
+    min-width: 24px;
+    height: 24px;
   }
 
   .contact-btn {
