@@ -26,10 +26,28 @@
   flex-shrink: 0;
 }
 
+/* Wrapper — both animations live here so blink overlays rotate with the image */
+.cat-container {
+  position: relative;
+  display: inline-block;
+  line-height: 0;                  /* prevent gap below img */
+  animation: cat-tail-wag 7s ease-in-out infinite;
+  transform-origin: center center;
+}
+
+/* Tail wag — a gentle asymmetric sway of the whole circular illustration */
+@keyframes cat-tail-wag {
+  0%, 100% { transform: rotate(0deg);     }
+  35%       { transform: rotate(2.5deg);  }
+  65%       { transform: rotate(-1.8deg); }
+}
+
 .cat-img {
   width: 320px;
   height: auto;
+  display: block;
 }
+
 
 /* ---------- Right: Contact content ---------- */
 .contact-right {

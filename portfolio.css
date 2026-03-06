@@ -121,6 +121,26 @@
 }
 
 /* ===========================
+   SCROLL REVEAL — Cards animate in on scroll
+   =========================== */
+
+/* Initial hidden state — set by JS (progressive enhancement) */
+.card.scroll-hidden {
+  opacity: 0;
+  transform: translateY(24px);
+}
+
+/* Reveal animation */
+@keyframes card-reveal {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0);    }
+}
+
+.card.scroll-reveal {
+  animation: card-reveal 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+/* ===========================
    RESPONSIVE — 3 columns (below 1100px)
    =========================== */
 @media (max-width: 1100px) {
